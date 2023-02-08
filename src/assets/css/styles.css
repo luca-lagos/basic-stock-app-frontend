@@ -37,7 +37,68 @@ input {
 .todoForm {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 25px;
+  margin: 15px auto;
+}
+
+.todoForm.edit {
+  align-items: center;
+  font-size: 18px;
+  color: rgb(54, 54, 54);
+  margin: 10px auto;
+}
+
+.todoForm.edit p::first-letter{
+  text-transform: capitalize;
+}
+
+.formEdit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todoButtons {
+  width: 20%;
+  display: flex;
+  gap: 5px;
+}
+
+.todoButtons .todoEdit {
+  width: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  padding: 7px;
+  border: 2px solid rgb(253, 197, 76);
+  color: rgb(253, 197, 76);
+  font-size: 18px;
+  background-color: rgba(253, 197, 76, 0.3);
+  transition: all 0.3s;
+}
+
+.todoButtons .todoEdit:hover {
+  background-color: rgba(253, 197, 76, 0.5);
+}
+
+.todoButtons .todoDelete {
+  width: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  padding: 7px;
+  border: 2px solid rgb(247, 89, 89);
+  color: rgb(247, 89, 89);
+  font-size: 18px;
+  background-color: rgba(247, 89, 89, 0.3);
+  transition: all 0.3s;
+}
+
+.todoButtons .todoDelete:hover {
+  background-color: rgba(247, 89, 89, 0.5);
 }
 
 .todoInput {
@@ -57,6 +118,10 @@ input {
   outline: none;
 }
 
+.todoInput.edit{
+  width: 75%;
+}
+
 .todoButton {
   width: 15%;
   cursor: pointer;
@@ -74,3 +139,41 @@ input {
 .todoButton:hover {
   background-color: rgba(72, 72, 211, 0.5);
 }
+
+.todoList {
+  overflow-x: hidden;
+  max-height: 150px;
+}
+
+.todoEmpty {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-size: 60px;
+  color: rgb(238, 132, 132);
+  margin-top: 20px;
+}
+
+.todoEmpty span {
+  font-size: 20px;
+}
+
+hr {
+  width: 15%;
+  border: 2px solid rgb(238, 132, 132);
+  border-radius: 25px;
+}
+ .todoButton:disabled{
+  border: 2px solid rgb(165, 164, 164);
+  color: rgb(165, 164, 164);
+  font-size: 20px;
+  background-color: white;
+  cursor: default;
+ }
+
+ .todoButton:hover:disabled{
+  background-color: white;
+ }
