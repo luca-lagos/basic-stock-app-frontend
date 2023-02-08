@@ -1,12 +1,10 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
 import TodoApp from "./components/TodoApp";
-import "./App.css";
+import "./assets/css/styles.css"
 
 function App() {
   return (
     <div className="App">
-      <TodoApp></TodoApp>
+      <TodoApp/>
     </div>
   );
 }
